@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "VinoCheck",
+    "slug": "vinocheck",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "vinocheck",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#2D2D2D"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.vinocheck.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "VinoCheck needs camera access to scan wine menus and bottles for price analysis."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#2D2D2D"
+      },
+      "package": "com.vinocheck.app",
+      "permissions": ["android.permission.CAMERA"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow VinoCheck to access your camera to scan wine menus and bottles."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
